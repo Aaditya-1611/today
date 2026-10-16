@@ -1,0 +1,181 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f3f6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #52d0ec;
+  padding: 12px 40px;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.search-box {
+  flex: 1;                 
+  margin: 0 30px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  background-color: white;
+  color: #4c9db1;
+  border: none;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.product {
+  display: flex;
+  background-color: white;
+  margin: 20px 40px;
+  padding: 25px;
+}
+
+
+.product-image {
+  width: 40%;
+  text-align: center;
+}
+
+.product-image img {
+  width: 90%;
+  border: 1px solid #ddd;
+}
+
+
+.product-info {
+  width: 60%;
+  padding-left: 30px;
+}
+
+.product-info h2 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.rating {
+  background-color: #388e3c;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 15px 0 5px 0;
+}
+
+.old-price {
+  color: gray;
+  text-decoration: line-through;
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.discount {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.stock {
+  color: #388e3c;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 14px 30px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cart-btn {
+  background-color: #e3f58c;
+}
+
+.buy-btn {
+  background-color: #fb641b;
+}
+
+.reviews {
+  background-color: white;
+  margin: 20px 40px;
+  padding: 25px;
+}
+
+.review {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.review h4 {
+  margin: 0 0 5px 0;
+}
+
+.review p {
+  margin: 5px 0;
+  color: #555;
+}
+/* media query -> responsive */
+@media screen and (max-width:480px){
+    .navbar{
+        font-size: 20px;
+    }
+    .navbar div i{
+        margin-left: 15px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero img, .hero div{
+        width: 80%;
+    }
+    .hero h2{
+        font-size: 50px;
+    }
+    .hero h1{
+        font-size: 35px;
+    }
+    .product{
+        padding: 25px;
+    }
+    .info h1{
+        font-size: 20px;
+    }
+    .pricerow h2{
+        font-size: 20px;
+    }
+    .off{
+        font-size: 22px;
+    }
+    .buy{
+        flex-direction: column;
+    }
+    .buy button{
+        width: 100%;
+    }
+}

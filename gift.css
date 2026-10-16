@@ -1,0 +1,96 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff5f8;  
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 40px;
+  border-bottom: 2px solid #350125;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #b513b8;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #a92ecf;
+}
+
+.nav-right input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #9f3bc3;
+  border-radius: 4px;
+}
+
+.nav-right button {
+  padding: 8px 12px;
+  background-color: #af54b9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #e489bb;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe0ec;
+  padding: 12px;
+}
+
+.categories a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.categories a:hover {
+  color: #ceb4c2;
+  text-decoration: underline;
+}
+.content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.content h1 {
+  color: #d7b8c9;
+}
+/* media query -> responsive */
+@media screen and (max-width:450px){
+    .navbar{
+        font-size: 20px;
+    }
+    .navbar div i{
+        margin-left: 15px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero img, .hero div{
+        width: 80%;
+    }
+    
+}
