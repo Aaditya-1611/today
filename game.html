@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Space Shooter</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>NEON <span>STRIKE</span></h1>
+        <div class="stats">
+            <p> SCORE: <span id="score">0</span></p>
+            <p> LIVES: <span id="lives">3</span></p>
+        </div>
+
+        <canvas id="game" width="400" height="550"></canvas>
+
+        <div id="message">
+            <h2>SPACE SHOOTER</h2>
+            <p>Destroy enemies. Survive the galaxy.</p>
+            <button id="startBtn">START GAME</button>
+        </div>
+
+        <p class="controls">MOVE: ← → or A / D &nbsp; | &nbsp; SHOOT: SPACE</p>
+        <div class="mobile-controls">
+            <button id="leftBtn">◀</button>
+            <button id="shootBtn">FIRE</button>
+            <button id="rightBtn">▶</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
