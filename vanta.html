@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <script>document.documentElement.className="js"</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>NOIR — Maison de Fumée · Fictional Brand Concept</title>
+  <meta name="description" content="NOIR is a fictional luxury brand design concept showcasing eight imaginary packaging identities in CSS 3D. Not a real product. Adults 18+ only.">
+  <link rel="stylesheet" href="vanta.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- Notice bar -->
+  <div class="notice" role="note">
+    <div class="notice-track">
+      <span>◆ Fictional design concept — not a real product, not for sale ◆</span>
+      <span>◆ Intended for adults 18+ only ◆</span>
+      <span>◆ Tobacco use causes serious disease and death ◆</span>
+      <span>◆ Fictional design concept — not a real product, not for sale ◆</span>
+      <span>◆ Intended for adults 18+ only ◆</span>
+      <span>◆ Tobacco use causes serious disease and death ◆</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <a href="#top" class="brand" aria-label="NOIR home">
+      <span class="brand-logo logo-img" role="img" aria-label="NOIR Cigarettes"></span>
+    </a>
+    <label for="nav-toggle" class="burger" role="button" aria-label="Open menu"><span></span><span></span><span></span></label>
+    <nav class="menu" aria-label="Main">
+      <a href="#top">Home</a>
+      <a href="#showroom">360° View</a>
+      <a href="#collection">Collection</a>
+      <a href="#about">About</a>
+      <a href="#awareness">Awareness</a>
+      <a href="#footer" class="menu-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span>
+        <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+        <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+        <span class="spark s4"></span><span class="spark s5"></span><span class="spark s6"></span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Maison de Fumée · Concept Edition 2026</p>
+          <h1 class="hero-logo" aria-label="NOIR Cigarettes"><span class="logo-img" aria-hidden="true"></span></h1>
+          <p class="hero-sub">Eight imaginary identities. One obsession with darkness, light and the art of packaging.</p>
+          <div class="hero-actions">
+            <a href="#showroom" class="btn btn-red">Enter 360° Showroom</a>
+            <a href="#collection" class="btn btn-ghost">View Collection</a>
+            <button type="button" class="btn btn-ghost open-btn" aria-pressed="false">Open the pack</button>
+          </div>
+          <p class="hero-fine">A fictional brand study in CSS 3D. No products. No sales.</p>
+        </div>
+
+        <div class="hero-visual b-noir">
+          <div class="hero-glow"></div>
+          <div class="hero-stage">
+            <div class="float">
+              <div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Edition Noire · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>NOIR</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">NOIR</b></div>
+                  <div class="face lback"><span>NOIR</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div>
+            </div>
+            <div class="ground"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Glowing cigarette illustration -->
+      <div class="cig" aria-hidden="true">
+        <i class="filter"></i><i class="paper"></i><i class="ember"></i>
+        <span class="tip-smoke"><b></b><b></b><b></b><b></b></span>
+      </div>
+
+      <!-- Smoke -->
+      <div class="smoke" aria-hidden="true">
+        <span class="puff"></span><span class="puff"></span><span class="puff"></span><span class="puff"></span>
+        <span class="puff"></span><span class="puff"></span><span class="puff"></span><span class="puff"></span>
+        <span class="puff"></span><span class="puff"></span>
+      </div>
+
+      <a href="#collection" class="scroll-cue" aria-label="Scroll to collection"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>VANTA</span><i>◆</i><span>NOIR</span><i>◆</i><span>VOLT</span><i>◆</i><span>OBSIDIAN</span><i>◆</i>
+        <span>ONYX</span><i>◆</i><span>APEX</span><i>◆</i><span>EMBER</span><i>◆</i><span>ZERO</span><i>◆</i>
+        <span>VANTA</span><i>◆</i><span>NOIR</span><i>◆</i><span>VOLT</span><i>◆</i><span>OBSIDIAN</span><i>◆</i>
+        <span>ONYX</span><i>◆</i><span>APEX</span><i>◆</i><span>EMBER</span><i>◆</i><span>ZERO</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- 360 SHOWROOM -->
+    <section class="section showroom" id="showroom">
+      <header class="section-head">
+        <p class="eyebrow">360° Showroom</p>
+        <h2>Walk the <em>Full Circle</em></h2>
+        <p>One continuous orbit of all eight concepts. Drag to spin it, or choose a brand and the ring turns smoothly to it.</p>
+      </header>
+
+      <input type="checkbox" id="pause" aria-label="Pause rotation">
+      <input type="checkbox" id="flip" aria-label="Flip packs">
+      <input type="checkbox" id="open" aria-label="Open pack lids">
+
+      <div class="stage360" id="stage">
+        <div class="aura"></div>
+        <button type="button" class="arr prev" aria-label="Previous brand">‹</button>
+        <button type="button" class="arr next" aria-label="Next brand">›</button>
+        <div class="floor"><i></i><i></i><i></i><b class="badge360" aria-hidden="true"><span>360°</span></b></div>
+        <div class="tilt">
+          <div class="ring3d" id="ring">
+            <div class="slot b-vanta" style="--i:0"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Ultra Black · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>VANTA</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">VANTA</b></div>
+                  <div class="face lback"><span>VANTA</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-noir" style="--i:1"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Edition Noire · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>NOIR</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">NOIR</b></div>
+                  <div class="face lback"><span>NOIR</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-volt" style="--i:2"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">High Voltage · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>VOLT</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">VOLT</b></div>
+                  <div class="face lback"><span>VOLT</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-obsidian" style="--i:3"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Volcanic Glass · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>OBSIDIAN</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">OBSIDIAN</b></div>
+                  <div class="face lback"><span>OBSIDIAN</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-onyx" style="--i:4"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Polished Stone · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>ONYX</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">ONYX</b></div>
+                  <div class="face lback"><span>ONYX</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-apex" style="--i:5"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Summit Red · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>APEX</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">APEX</b></div>
+                  <div class="face lback"><span>APEX</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-ember" style="--i:6"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Slow Burn · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>EMBER</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">EMBER</b></div>
+                  <div class="face lback"><span>EMBER</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="slot b-zero" style="--i:7"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Pure Silver · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>ZERO</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">ZERO</b></div>
+                  <div class="face lback"><span>ZERO</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+          </div>
+        </div>
+      </div>
+      <p class="drag-hint">← Drag to rotate →</p>
+      <div class="controls" role="group" aria-label="Choose a brand"><button type="button" data-i="auto" class="on" aria-pressed="true">Auto 360°</button><button type="button" data-i="0" aria-pressed="false">VANTA</button><button type="button" data-i="1" aria-pressed="false">NOIR</button><button type="button" data-i="2" aria-pressed="false">VOLT</button><button type="button" data-i="3" aria-pressed="false">OBSIDIAN</button><button type="button" data-i="4" aria-pressed="false">ONYX</button><button type="button" data-i="5" aria-pressed="false">APEX</button><button type="button" data-i="6" aria-pressed="false">EMBER</button><button type="button" data-i="7" aria-pressed="false">ZERO</button></div>
+      <div class="toggles"><label for="pause"><span class="on">▶ Resume</span><span class="off">❚❚ Pause</span></label><label for="open"><span class="on">Close lids</span><span class="off">Open lids</span></label><label for="flip"><span class="on">Show fronts</span><span class="off">⟳ Flip packs</span></label></div>
+      <p class="motion-note">Your device has “reduce motion” turned on, so the ring turns slowly. Use Pause, the arrows or the brand buttons to explore.</p>
+      <div class="infos" aria-live="polite"><div class="info i0"><span>360° Showroom</span><h3>The Full Collection</h3><p>All eight identities orbiting in one ring. Hover to pause, or pick a brand to bring it to the front.</p><em>Drag · Pick · Pause</em></div><div class="info i1 b-vanta"><span>01 / 08</span><h3>VANTA</h3><p>Light-absorbing black with silver pinstripes. Quiet, absolute, unseen.</p><em>Vanta Black · Silver</em><div class="swatches" aria-label="Palette"><i style="--c:#05060a"></i><i style="--c:#d3d8e0"></i><i style="--c:#a5afff"></i></div></div><div class="info i2 b-noir"><span>02 / 08</span><h3>NOIR</h3><p>The house signature. Midnight lacquer cut by a single crimson blade.</p><em>Midnight · Crimson Neon</em><div class="swatches" aria-label="Palette"><i style="--c:#050507"></i><i style="--c:#ff2a4a"></i><i style="--c:#f4f5f7"></i></div></div><div class="info i3 b-volt"><span>03 / 08</span><h3>VOLT</h3><p>Charged gold lightning across a carbon-dark shell. Pure electricity.</p><em>Carbon · Electric Gold</em><div class="swatches" aria-label="Palette"><i style="--c:#000"></i><i style="--c:#ffd21f"></i><i style="--c:#c98a00"></i></div></div><div class="info i4 b-obsidian"><span>04 / 08</span><h3>OBSIDIAN</h3><p>Faceted volcanic glass edged in 24-karat gold leaf. Sharp and sovereign.</p><em>Faceted Glass · Gold Leaf</em><div class="swatches" aria-label="Palette"><i style="--c:#000"></i><i style="--c:#d4af37"></i><i style="--c:#f0d98a"></i></div></div><div class="info i5 b-onyx"><span>05 / 08</span><h3>ONYX</h3><p>Polished charcoal stone crowned with a brushed platinum halo.</p><em>Charcoal · Platinum</em><div class="swatches" aria-label="Palette"><i style="--c:#353941"></i><i style="--c:#e9ecf1"></i><i style="--c:#0c0d10"></i></div></div><div class="info i6 b-apex"><span>06 / 08</span><h3>APEX</h3><p>Racing red climbing to a golden summit. Built for the top of the mountain.</p><em>Summit Red · Gold Peak</em><div class="swatches" aria-label="Palette"><i style="--c:#d3142f"></i><i style="--c:#ffd36b"></i><i style="--c:#5a0614"></i></div></div><div class="info i7 b-ember"><span>07 / 08</span><h3>EMBER</h3><p>Soot-black fading into a molten orange glow at the base. Warm, slow, alive.</p><em>Soot · Molten Glow</em><div class="swatches" aria-label="Palette"><i style="--c:#3c0f04"></i><i style="--c:#ff5a1f"></i><i style="--c:#ffd2a0"></i></div></div><div class="info i8 b-zero"><span>08 / 08</span><h3>ZERO</h3><p>Mirror-silver minimalism with an ice-blue aura. Nothing added, nothing hidden.</p><em>Mirror Silver · Ice Glow</em><div class="swatches" aria-label="Palette"><i style="--c:#fbfcfe"></i><i style="--c:#a9b1be"></i><i style="--c:#6ec8ff"></i></div></div></div>
+    </section>
+
+    <!-- COLLECTION -->
+    <section class="section" id="collection">
+      <header class="section-head">
+        <p class="eyebrow">The Collection</p>
+        <h2>Eight Fictional <em>Identities</em></h2>
+        <p>Every concept pack is built from CSS. Hover to spin it and flip the lid open.</p>
+      </header>
+
+      <div class="grid">
+
+        <article class="card b-vanta">
+          <span class="num">01</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Ultra Black · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>VANTA</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">VANTA</b></div>
+                  <div class="face lback"><span>VANTA</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>VANTA</h3>
+          <p>Matte black with a brushed-silver corner stripe. Quiet, absolute, unseen.</p>
+          <ul class="chips"><li>Matte Black</li><li>Silver Stripe</li></ul>
+        </article>
+
+        <article class="card b-noir">
+          <span class="num">02</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Edition Noire · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>NOIR</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">NOIR</b></div>
+                  <div class="face lback"><span>NOIR</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>NOIR</h3>
+          <p>The house signature. Black lacquer cut by a crimson band and a foil crest.</p>
+          <ul class="chips"><li>Black Lacquer</li><li>Crimson Band</li></ul>
+        </article>
+
+        <article class="card b-volt">
+          <span class="num">03</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">High Voltage · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>VOLT</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">VOLT</b></div>
+                  <div class="face lback"><span>VOLT</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>VOLT</h3>
+          <p>Crisp white card with a deep-blue swoosh and a gold crest. Clean voltage.</p>
+          <ul class="chips"><li>White Card</li><li>Cobalt Swoosh</li></ul>
+        </article>
+
+        <article class="card b-obsidian">
+          <span class="num">04</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Volcanic Glass · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>OBSIDIAN</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">OBSIDIAN</b></div>
+                  <div class="face lback"><span>OBSIDIAN</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>OBSIDIAN</h3>
+          <p>Brushed gold foil with a black crest and a single red band.</p>
+          <ul class="chips"><li>Gold Foil</li><li>Red Band</li></ul>
+        </article>
+
+        <article class="card b-onyx">
+          <span class="num">05</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Polished Stone · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>ONYX</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">ONYX</b></div>
+                  <div class="face lback"><span>ONYX</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>ONYX</h3>
+          <p>Pearl white broken by a charcoal slab. Cool, weighty, precise.</p>
+          <ul class="chips"><li>Pearl White</li><li>Charcoal Slab</li></ul>
+        </article>
+
+        <article class="card b-apex">
+          <span class="num">06</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Summit Red · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>APEX</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">APEX</b></div>
+                  <div class="face lback"><span>APEX</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>APEX</h3>
+          <p>Racing red with a gold crest and gold rules. Built for the summit.</p>
+          <ul class="chips"><li>Summit Red</li><li>Gold Crest</li></ul>
+        </article>
+
+        <article class="card b-ember">
+          <span class="num">07</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Slow Burn · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>EMBER</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">EMBER</b></div>
+                  <div class="face lback"><span>EMBER</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>EMBER</h3>
+          <p>Warm kraft stock fading into a molten ember glow at the base.</p>
+          <ul class="chips"><li>Kraft Stock</li><li>Ember Glow</li></ul>
+        </article>
+
+        <article class="card b-zero">
+          <span class="num">08</span>
+          <div class="stage">
+            <div class="glow"></div>
+            <div class="float"><div class="pack">
+                <div class="face front"><i class="hinge"></i><i class="notch"></i><i class="tear"></i><em class="tag">Pure Silver · 20</em><em class="cls">20 Class A Cigarettes</em><span class="warn">SMOKING KILLS</span></div>
+                <div class="face back"><i class="tear"></i><div class="wbox"><b>SMOKING KILLS</b><small>Quit now · 1800-11-2356</small></div><i class="bars"></i><span class="fine">Fictional concept · Not for sale</span></div>
+                <div class="face left"><i class="tear"></i><span>ZERO</span></div>
+                <div class="face right"><i class="tear"></i><span>20 CLASS A CIGARETTES</span></div>
+                <i class="mouth"></i>
+                <div class="face bottom"></div>
+                <div class="lid">
+                  <div class="face lfront"><i class="crest"></i><b class="logo">ZERO</b></div>
+                  <div class="face lback"><span>ZERO</span></div>
+                  <div class="face lleft"></div><div class="face lright"></div>
+                  <div class="face ltop"></div>
+                  <i class="lin"></i>
+                </div>
+              </div></div>
+            <div class="ground"></div>
+          </div>
+          <h3>ZERO</h3>
+          <p>Matte white minimalism with a single silver sweep. Nothing extra.</p>
+          <ul class="chips"><li>Matte White</li><li>Silver Sweep</li></ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about-grid">
+        <div class="about-visual" aria-hidden="true">
+          <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+          <div class="emblem"><span>N</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About the House</p>
+          <h2>Darkness, <em>Designed</em></h2>
+          <p>NOIR is a fictional maison created as a design exercise: a study of how black, red, gold and silver can be composed into packaging that feels cinematic, weighty and luxurious.</p>
+          <p>Each of the eight concept identities explores a different material language: absorbed light, volcanic glass, polished stone, molten glow, mirrored metal. Every shape you see is pure CSS, with no frameworks; the logo is the only image.</p>
+          <div class="stats">
+            <div><strong>8</strong><span>Concept Identities</span></div>
+            <div><strong>1</strong><span>Opening Lid per Pack</span></div>
+            <div><strong>0</strong><span>Real Products</span></div>
+          </div>
+          <div class="values">
+            <div class="value"><i>I</i><h4>Craft</h4><p>Every edge, gloss and shadow is hand-tuned.</p></div>
+            <div class="value"><i>II</i><h4>Light</h4><p>Neon glow gives each identity its own pulse.</p></div>
+            <div class="value"><i>III</i><h4>Restraint</h4><p>A concept only. No sales, no shopping.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARENESS -->
+    <section class="section awareness" id="awareness">
+      <div class="warning-box">
+        <div class="warn-icon" aria-hidden="true">!</div>
+        <div>
+          <h2>Tobacco Awareness</h2>
+          <p><strong>Smoking kills.</strong> Beautiful design does not change what tobacco does to the human body. The brands on this site are entirely fictional, and the real products they imitate cause serious harm.</p>
+        </div>
+      </div>
+
+      <div class="facts">
+        <article class="fact"><strong>8M+</strong><p>People die every year from tobacco use, according to the World Health Organization. Around 1.3 million of them are non-smokers exposed to second-hand smoke.</p></article>
+        <article class="fact"><strong>½</strong><p>Tobacco kills up to half of the people who use it, according to the WHO.</p></article>
+        <article class="fact"><strong>7,000+</strong><p>Chemicals are found in tobacco smoke, and at least 70 of them are known to cause cancer.</p></article>
+        <article class="fact"><strong>20 min</strong><p>Heart rate and blood pressure begin to drop within about twenty minutes of the last cigarette. It is never too late to quit.</p></article>
+      </div>
+
+      <div class="help">
+        <div>
+          <h3>Thinking about quitting?</h3>
+          <p>Free, confidential support exists. Talk to a doctor or pharmacist about proven options, and reach out to a quitline in your country.</p>
+        </div>
+        <ul>
+          <li><span>India</span><b>National Tobacco Quit Line · 1800-11-2356</b></li>
+          <li><span>USA</span><b>1-800-QUIT-NOW (1-800-784-8669)</b></li>
+          <li><span>Global</span><b>who.int/campaigns/world-no-tobacco-day</b></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="brand" aria-label="NOIR home"><span class="brand-logo logo-img" role="img" aria-label="NOIR Cigarettes"></span></a>
+        <p>A fictional luxury brand concept and CSS 3D design study.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h5>Explore</h5>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#awareness">Awareness</a>
+      </nav>
+      <div class="footer-col">
+        <h5>The Eight</h5>
+        <span>VANTA · NOIR · VOLT · OBSIDIAN</span>
+        <span>ONYX · APEX · EMBER · ZERO</span>
+      </div>
+      <div class="footer-col">
+        <h5>Notice</h5>
+        <span>All brands are fictional. Any resemblance to real products is coincidental. For adults 18+.</span>
+      </div>
+    </div>
+    <div class="health-bar">SMOKING KILLS · QUIT TODAY · 1800-11-2356</div>
+    <p class="copyright">© 2026 NOIR Concept Studio. A design exercise. Not for sale or distribution.</p>
+  </footer>
+
+  <a href="#top" class="totop" aria-label="Back to top">↑</a>
+
+
+  <script>
+  /* NOIR showroom: smooth turntable. Keeps its angle and speed between modes, so nothing ever jumps. */
+  (function () {
+    var ring = document.getElementById('ring'), stage = document.getElementById('stage');
+    if (!ring || !stage) return;
+    var infos = [].slice.call(document.querySelectorAll('.info'));
+    var btns = [].slice.call(document.querySelectorAll('.controls button'));
+    var pause = document.getElementById('pause');
+    var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var STEP = 45, AUTO = 360 / 26;               // degrees per brand, auto speed in deg/s
+    var angle = 0, vel = 0, target = null, auto = true, drag = null, shown = -2, last = 0, onscreen = true;
+
+    function brandAt(a) { return ((Math.round(-a / STEP) % 8) + 8) % 8; }
+    function show(i) {                              // i = -1 for the overview, else brand 0..7
+      if (i === shown) return; shown = i;
+      infos.forEach(function (el, k) { el.classList.toggle('on', k === i + 1); });
+      btns.forEach(function (b) {
+        var on = (b.dataset.i === 'auto' ? -1 : +b.dataset.i) === i;
+        b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+      });
+    }
+    function goBrand(i) {                           // nearest lap of that brand: always the short way round
+      var base = -STEP * i;
+      target = base + 360 * Math.round((angle - base) / 360); auto = false;
+    }
+    function nudge(dir) {
+      var idx = Math.round(-(target !== null ? target : angle) / STEP);
+      target = -STEP * (idx + dir); auto = false;
+    }
+    function frame(t) {
+      var dt = Math.min((t - last) / 1000, 0.05); last = t;
+      if (onscreen && !drag) {
+        if (target !== null) {                      // critically damped spring: eases in and out
+          var k = 24, c = 2 * Math.sqrt(k);
+          vel += (k * (target - angle) - c * vel) * dt;
+          angle += vel * dt;
+          if (Math.abs(target - angle) < 0.02 && Math.abs(vel) < 0.2) { angle = target; vel = 0; }
+        } else {                                    // auto: glide toward cruising speed (or rest when paused)
+          var want = (auto && !pause.checked) ? -AUTO * (calm.matches ? 0.5 : 1) : 0;
+          vel += (want - vel) * (1 - Math.exp(-dt * (want ? 3 : 8)));
+          if (!want && Math.abs(vel) < 0.4) vel = 0;
+          angle += vel * dt;
+        }
+      }
+      if (onscreen) ring.style.transform = 'rotateY(' + angle.toFixed(2) + 'deg)';
+      show(target === null && auto ? -1 : brandAt(target !== null ? target : angle));
+      requestAnimationFrame(frame);
+    }
+
+    /* controls */
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (b.dataset.i === 'auto') { target = null; auto = true; if (pause.checked) pause.checked = false; }
+        else goBrand(+b.dataset.i);
+      });
+    });
+    stage.querySelector('.prev').addEventListener('click', function () { nudge(-1); });
+    stage.querySelector('.next').addEventListener('click', function () { nudge(1); });
+    document.getElementById('showroom').addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { nudge(1); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { nudge(-1); e.preventDefault(); }
+    });
+
+    /* drag to spin, with inertia, then settle on the nearest brand */
+    stage.addEventListener('pointerdown', function (e) {
+      if (e.target.closest('button')) return;
+      drag = { x: e.clientX, a: angle, lx: e.clientX, lt: performance.now(), v: 0, moved: false };
+      target = null; vel = 0; stage.classList.add('grabbing');
+      try { stage.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    stage.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      var now = performance.now(), dx = e.clientX - drag.lx;
+      if (Math.abs(e.clientX - drag.x) > 4) drag.moved = true;
+      if (!drag.moved) return;
+      angle = drag.a + (e.clientX - drag.x) * 0.45;
+      drag.v = 0.8 * drag.v + 0.2 * (dx * 0.45 / Math.max(now - drag.lt, 1) * 1000);
+      drag.lx = e.clientX; drag.lt = now;
+    });
+    function release() {
+      if (!drag) return;
+      if (!drag.moved) { drag = null; stage.classList.remove('grabbing'); if (!auto) target = -STEP * Math.round(-angle / STEP); return; }
+      vel = Math.max(-900, Math.min(900, drag.v)); drag = null; stage.classList.remove('grabbing');
+      auto = false; target = -STEP * Math.round(-(angle + vel * 0.3) / STEP);
+    }
+    stage.addEventListener('pointerup', release);
+    stage.addEventListener('pointercancel', release);
+
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { onscreen = en[0].isIntersecting; }, { rootMargin: '100px' }).observe(stage);
+    }
+    requestAnimationFrame(function (t) { last = t; frame(t); });
+  })();
+
+  /* hero: open / close the pack lid */
+  (function () {
+    var b = document.querySelector('.open-btn'), st = document.querySelector('.hero-stage');
+    if (!b || !st) return;
+    b.addEventListener('click', function () {
+      var o = st.classList.toggle('open');
+      b.setAttribute('aria-pressed', o); b.textContent = o ? 'Close the pack' : 'Open the pack';
+    });
+  })();
+
+  /* mobile menu closes after choosing a link */
+  (function () {
+    var tg = document.getElementById('nav-toggle');
+    [].forEach.call(document.querySelectorAll('.menu a'), function (a) {
+      a.addEventListener('click', function () { tg.checked = false; });
+    });
+  })();
+  </script>
+  <script>
+  /* Cigarette interior. Everything is painted ONCE with canvas into a handful of photo-style textures
+     (filter ends, cork tipping, paper, crumpled foil), pre-decoded, then shared by every pack.
+     The structure is built right after first paint, so "Open the pack" is only the lid animation. */
+  (function () {
+    var ROWS = [{ n: 7, z: -12.5, sh: .34 }, { n: 6, z: 0, sh: .18 }, { n: 7, z: 12.5, sh: .03 }],
+        P = 15.6, R = 7.5, TAU = Math.PI * 2, TIP = 20, STICK_H = 40;
+    var PULLED = [{ r: 1, i: 2, up: 11 }, { r: 0, i: 4, up: 6 }];            /* sticks pulled up */
+    function rng(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; var t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+    function cv(w, h, s) { var c = document.createElement('canvas'); c.width = Math.round(w * s); c.height = Math.round(h * s); var x = c.getContext('2d'); x.scale(s, s); return { c: c, x: x }; }
+    function el(t, c) { var e = document.createElement(t); if (c) e.className = c; return e; }
+    function xOf(r, i) { return 60 - (r.n - 1) * P / 2 + i * P; }
+    function isPulled(ri, i) { return PULLED.some(function (p) { return p.r === ri && p.i === i; }); }
+    function dot(x, px, py, r, col) { x.fillStyle = col; x.beginPath(); x.arc(px, py, r, 0, TAU); x.fill(); }
+
+    /* ---- filter end seen from above: cellulose acetate with cork-tipping rim and soft contact shadow ---- */
+    function shadow(x, cx, cy, r) {
+      var g = x.createRadialGradient(cx, cy + .5, r * .8, cx, cy + .5, r * 1.3);
+      g.addColorStop(0, 'rgba(0,0,0,.75)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+      x.fillStyle = g; x.beginPath(); x.arc(cx, cy + .5, r * 1.3, 0, TAU); x.fill();
+    }
+    function disc(x, cx, cy, r, rand, shade) {
+      var k, a, d, rim = x.createRadialGradient(cx - r * .3, cy - r * .35, 0, cx, cy, r);
+      rim.addColorStop(0, '#dcaa6e'); rim.addColorStop(1, '#9c6428');
+      dot(x, cx, cy, r, rim);
+      var ri = r - .9, g = x.createRadialGradient(cx - ri * .25, cy - ri * .3, 0, cx, cy, ri);
+      g.addColorStop(0, '#fdfaf0'); g.addColorStop(.6, '#f4ecd8'); g.addColorStop(1, '#e0d0aa');
+      dot(x, cx, cy, ri, g);
+      x.save(); x.beginPath(); x.arc(cx, cy, ri, 0, TAU); x.clip();
+      for (k = 0; k < 170; k++) { a = rand() * TAU; d = Math.sqrt(rand()) * ri; dot(x, cx + Math.cos(a) * d, cy + Math.sin(a) * d, .06 + rand() * .2, 'rgba(105,88,62,' + (.12 + rand() * .38) + ')'); }
+      for (k = 0; k < 70; k++) { a = rand() * TAU; d = Math.sqrt(rand()) * ri; dot(x, cx + Math.cos(a) * d, cy + Math.sin(a) * d, .08 + rand() * .16, 'rgba(255,255,255,' + (.35 + rand() * .4) + ')'); }
+      x.lineWidth = .1;
+      for (k = 0; k < 40; k++) { a = rand() * TAU; x.strokeStyle = 'rgba(130,108,72,.14)'; x.beginPath(); x.moveTo(cx + Math.cos(a) * ri * .15, cy + Math.sin(a) * ri * .15); x.lineTo(cx + Math.cos(a) * ri * .95, cy + Math.sin(a) * ri * .95); x.stroke(); }
+      var inr = x.createRadialGradient(cx, cy, ri * .68, cx, cy, ri); inr.addColorStop(0, 'rgba(120,80,30,0)'); inr.addColorStop(1, 'rgba(120,80,30,.3)');
+      x.fillStyle = inr; x.fillRect(cx - r, cy - r, 2 * r, 2 * r);
+      var h = x.createRadialGradient(cx - ri * .4, cy - ri * .45, 0, cx - ri * .4, cy - ri * .45, ri * .8); h.addColorStop(0, 'rgba(255,255,255,.55)'); h.addColorStop(1, 'rgba(255,255,255,0)');
+      x.fillStyle = h; x.fillRect(cx - r, cy - r, 2 * r, 2 * r);
+      x.fillStyle = 'rgba(0,0,0,' + shade + ')'; x.fillRect(cx - r, cy - r, 2 * r, 2 * r);
+      x.restore();
+      x.beginPath(); x.arc(cx, cy, r - .1, 0, TAU); x.strokeStyle = 'rgba(40,22,6,.6)'; x.lineWidth = .3; x.stroke();
+    }
+
+    /* ---- one cigarette seen from the side: cork tipping, gold ring, white paper, round shading ---- */
+    function stick(x, sx, sy, w, h, rand, shade, fade, tone) {
+      var k, p = x.createLinearGradient(0, sy, 0, sy + h);
+      p.addColorStop(0, '#fcf9f1'); p.addColorStop(.5, '#f3eee1'); p.addColorStop(1, '#e4dccb');
+      x.fillStyle = p; x.fillRect(sx, sy, w, h);
+      for (k = 0; k < 60; k++) { x.fillStyle = 'rgba(120,100,70,' + (.03 + rand() * .05) + ')'; x.fillRect(sx + rand() * w, sy + TIP + rand() * (h - TIP), .2 + rand() * .5, .15); }
+      x.fillStyle = 'rgba(0,0,0,.07)'; x.fillRect(sx + w * .66, sy + TIP, .35, h);                 /* paper seam */
+      var c = x.createLinearGradient(0, sy, 0, sy + TIP), t = tone || 0;
+      c.addColorStop(0, 'rgb(' + (204 + t) + ',' + (158 + t) + ',' + (104 + t) + ')'); c.addColorStop(1, 'rgb(' + (184 + t) + ',' + (134 + t) + ',' + (80 + t) + ')');
+      x.fillStyle = c; x.fillRect(sx, sy, w, TIP);
+      for (k = 0; k < 150; k++) dot(x, sx + rand() * w, sy + rand() * TIP, .1 + rand() * .3, 'rgba(92,52,16,' + (.14 + rand() * .32) + ')');
+      for (k = 0; k < 70; k++) dot(x, sx + rand() * w, sy + rand() * TIP, .08 + rand() * .2, 'rgba(244,206,148,' + (.2 + rand() * .3) + ')');
+      for (k = 0; k < 28; k++) { x.fillStyle = 'rgba(255,225,170,.07)'; x.fillRect(sx, sy + rand() * TIP, w, .25); }
+      var e = x.createLinearGradient(0, sy, 0, sy + 1.6); e.addColorStop(0, 'rgba(60,32,8,.6)'); e.addColorStop(1, 'rgba(60,32,8,0)');
+      x.fillStyle = e; x.fillRect(sx, sy, w, 1.6);                                                    /* rounded top edge */
+      x.fillStyle = 'rgba(95,60,22,.85)'; x.fillRect(sx, sy + TIP - .5, w, .45);                      /* tipping ring */
+      x.fillStyle = 'rgba(226,190,104,.9)'; x.fillRect(sx, sy + TIP - .05, w, .55);
+      x.fillStyle = 'rgba(95,60,22,.55)'; x.fillRect(sx, sy + TIP + .5, w, .3);
+      var s = x.createLinearGradient(sx, 0, sx + w, 0);                                                /* cylinder */
+      s.addColorStop(0, 'rgba(0,0,0,.6)'); s.addColorStop(.12, 'rgba(0,0,0,.1)'); s.addColorStop(.3, 'rgba(255,255,255,.34)'); s.addColorStop(.4, 'rgba(255,255,255,.3)');
+      s.addColorStop(.55, 'rgba(255,255,255,0)'); s.addColorStop(.78, 'rgba(0,0,0,.2)'); s.addColorStop(.92, 'rgba(255,255,255,.06)'); s.addColorStop(1, 'rgba(0,0,0,.62)');
+      x.fillStyle = s; x.fillRect(sx, sy, w, h);
+      var d = x.createLinearGradient(0, sy + h * fade, 0, sy + h); d.addColorStop(0, 'rgba(0,0,0,0)'); d.addColorStop(1, 'rgba(0,0,0,.78)');
+      x.fillStyle = d; x.fillRect(sx, sy + h * fade, w, h * (1 - fade));                               /* falls into the box */
+      x.fillStyle = 'rgba(0,0,0,' + shade + ')'; x.fillRect(sx, sy, w, h);
+    }
+
+    /* ---- crumpled silver foil with a baked-in outline (alpha), lit from the top-left ---- */
+    function foil(w, h, S, rand, shape, dark, edgeStroke) {
+      var t = cv(w, h, S), x = t.x, k, r, c;
+      x.save(); shape(x); x.clip();
+      var cols = Math.round(w / 4.2), rows = Math.max(4, Math.round(h / 4.2)), cw = w / cols, ch = h / rows, pts = [], prev = 205;
+      for (r = 0; r <= rows; r++) { pts[r] = []; for (c = 0; c <= cols; c++) pts[r][c] = [c * cw + (c && c < cols ? (rand() - .5) * cw * .95 : 0), r * ch + (r && r < rows ? (rand() - .5) * ch * .95 : 0)]; }
+      var m = cv(w, h, 2), mx = m.x;                                  /* facets are drawn small, then scaled up smoothly = soft crinkles */
+      function tri(a, b, d, L) { mx.fillStyle = mx.strokeStyle = 'rgb(' + (L - 6) + ',' + (L - 2) + ',' + (L + 5) + ')'; mx.lineWidth = .4; mx.beginPath(); mx.moveTo(a[0], a[1]); mx.lineTo(b[0], b[1]); mx.lineTo(d[0], d[1]); mx.closePath(); mx.fill(); mx.stroke(); }
+      for (r = 0; r < rows; r++) for (c = 0; c < cols; c++) {
+        var A = pts[r][c], B = pts[r][c + 1], C = pts[r + 1][c], D = pts[r + 1][c + 1];
+        prev = Math.max(150, Math.min(248, prev * .5 + (150 + rand() * 98) * .5)); tri(A, B, C, prev | 0);
+        prev = Math.max(150, Math.min(248, prev * .5 + (150 + rand() * 98) * .5)); tri(B, D, C, prev | 0);
+      }
+      x.imageSmoothingEnabled = true; x.imageSmoothingQuality = 'high'; x.drawImage(m.c, 0, 0, w, h);
+      var sw = x.createLinearGradient(0, 0, w, 0); sw.addColorStop(0, 'rgba(255,255,255,.18)'); sw.addColorStop(.3, 'rgba(255,255,255,0)'); sw.addColorStop(.7, 'rgba(0,0,0,.05)'); sw.addColorStop(1, 'rgba(0,0,0,.14)');
+      x.fillStyle = sw; x.fillRect(0, 0, w, h);
+      for (k = 0; k < 55; k++) {
+        var px = rand() * w, py = rand() * h; x.strokeStyle = rand() < .5 ? 'rgba(255,255,255,.4)' : 'rgba(50,60,80,.28)'; x.lineWidth = .12 + rand() * .22;
+        x.beginPath(); x.moveTo(px, py); for (var j = 0; j < 3; j++) { px += (rand() - .5) * 14; py += (rand() - .5) * 8; x.lineTo(px, py); } x.stroke();
+      }
+      var bt = x.createLinearGradient(0, h * .55, 0, h); bt.addColorStop(0, 'rgba(0,0,0,0)'); bt.addColorStop(1, 'rgba(0,0,0,.55)'); x.fillStyle = bt; x.fillRect(0, 0, w, h);
+      x.fillStyle = 'rgba(0,0,0,' + dark + ')'; x.fillRect(0, 0, w, h);
+      x.restore();
+      if (edgeStroke) { shape(x); x.strokeStyle = 'rgba(255,255,255,.75)'; x.lineWidth = .5; x.stroke(); shape(x); x.strokeStyle = 'rgba(70,78,95,.5)'; x.lineWidth = .18; x.stroke(); }
+      return t.c;
+    }
+    function rectTorn(w, h, rand) {                                                                    /* straight, slightly torn upper edge */
+      var pts = [], n = 14, i; for (i = 0; i <= n; i++) pts.push([w * i / n, .6 + rand() * .9]);
+      return function (x) { x.beginPath(); x.moveTo(0, h); x.lineTo(0, pts[0][1]); pts.forEach(function (q) { x.lineTo(q[0], q[1]); }); x.lineTo(w, h); x.closePath(); };
+    }
+
+    function makeTextures() {
+      var rand = rng(7), out = {}, t, ri, i, S = 6;
+      /* top view: 20 filter ends, 7-6-7, in deep shadow between them */
+      t = cv(114, 41, S);
+      var bg = t.x.createLinearGradient(0, 0, 0, 41); bg.addColorStop(0, '#120e09'); bg.addColorStop(1, '#050403'); t.x.fillStyle = bg; t.x.fillRect(0, 0, 114, 41);
+      for (i = 0; i < 40; i++) dot(t.x, rand() * 114, rand() * 41, .1 + rand() * .25, 'rgba(210,214,224,' + (.05 + rand() * .1) + ')');   /* foil glints in the gaps */
+      ROWS.forEach(function (r) { for (var i = 0; i < r.n; i++) shadow(t.x, xOf(r, i) - 3, r.z + 20.5, R); });
+      ROWS.forEach(function (r, ri) { for (var i = 0; i < r.n; i++) if (!isPulled(ri, i)) disc(t.x, xOf(r, i) - 3, r.z + 20.5, R - .1, rand, r.sh + rand() * .08); });
+      PULLED.forEach(function (p) { var r = ROWS[p.r]; var g = t.x.createRadialGradient(xOf(r, p.i) - 3, r.z + 20.5, 0, xOf(r, p.i) - 3, r.z + 20.5, R); g.addColorStop(0, '#6e4623'); g.addColorStop(.75, '#8e5e2f'); g.addColorStop(1, '#2a1a0b'); dot(t.x, xOf(r, p.i) - 3, r.z + 20.5, R, g); });
+      out.top = t.c;
+      /* front view: 7 sticks side by side */
+      t = cv(114, STICK_H, S); t.x.fillStyle = '#0b0906'; t.x.fillRect(0, 0, 114, STICK_H);
+      for (i = 0; i < 7; i++) stick(t.x, xOf(ROWS[2], i) - 3 - R, 0, 15, STICK_H, rand, .02 + rand() * .05, .45, (rand() - .5) * 14);
+      out.side = t.c;
+      /* left / right: 3 sticks deep, the middle row sits back in shadow */
+      t = cv(41, STICK_H, S); t.x.fillStyle = '#0b0906'; t.x.fillRect(0, 0, 41, STICK_H);
+      [1, 0, 2].forEach(function (k) { stick(t.x, 20.5 + (k - 1) * 12.5 - R, 0, 15, STICK_H, rand, k === 1 ? .34 : .06, .45, (rand() - .5) * 14); });
+      out.edge = t.c;
+      /* one pulled-up stick + its filter end */
+      t = cv(15, 52, 12); stick(t.x, 0, 0, 15, 52, rng(21), .0, .8, 4); out.stick = t.c;
+      t = cv(15, 15, 16); disc(t.x, 7.5, 7.5, 7.4, rng(5), 0); out.cap = t.c;
+      /* foil collar: front (with thumb scoop), back, left, right */
+      out.foilf = foil(116, 28, 6, rng(11), function (x) { x.beginPath(); x.moveTo(0, .3); x.lineTo(34, .3); x.bezierCurveTo(41, 15, 75, 15, 82, .3); x.lineTo(116, .3); x.lineTo(116, 28); x.lineTo(0, 28); x.closePath(); }, 0, true);
+      out.foilb = foil(116, 32, 6, rng(12), rectTorn(116, 32, rng(2)), .1, false);
+      out.foill = foil(41, 30, 8, rng(13), rectTorn(41, 30, rng(3)), .14, false);
+      out.foilr = foil(41, 30, 8, rng(14), rectTorn(41, 30, rng(4)), .3, false);
+      return out;
+    }
+    /* canvas -> PNG -> decoded image, so the first paint after "open" never waits for decoding */
+    function toUrl(c) {
+      return new Promise(function (res) {
+        c.toBlob(function (b) {
+          var u = URL.createObjectURL(b), im = new Image(), done = function () { res('url(' + u + ')'); };
+          im.src = u; if (im.decode) im.decode().then(done, done); else im.onload = done;
+        }, 'image/png');
+      });
+    }
+
+    function build(pack) {
+      var mouth = pack.querySelector('.mouth');
+      if (!mouth || pack.querySelector('.bun')) return;
+      var g = el('i', 'bun');
+      ['rim', 'foil f', 'foil b', 'foil l', 'foil r', 'tp', 'sf', 'sb', 'sl', 'sr'].forEach(function (c) { g.appendChild(el('i', c)); });
+      PULLED.forEach(function (p) {
+        var r = ROWS[p.r], s = el('b', 'rs');
+        s.style.left = (xOf(r, p.i) - R) + 'px'; s.style.top = (18 - p.up) + 'px'; s.style.height = (STICK_H + p.up) + 'px';
+        s.style.transform = 'translateZ(' + r.z + 'px)';
+        s.appendChild(el('i')); s.appendChild(el('u')); g.appendChild(s);
+      });
+      pack.insertBefore(g, mouth.nextSibling);
+    }
+    function start() {
+      var tx = makeTextures(), keys = ['top', 'side', 'edge', 'stick', 'cap', 'foilf', 'foilb', 'foill', 'foilr'],
+          names = { top: 'top', side: 'side', edge: 'edge', stick: 'stick', cap: 'cap', foilf: 'foil-f', foilb: 'foil-b', foill: 'foil-l', foilr: 'foil-r' };
+      Promise.all(keys.map(function (k) { return toUrl(tx[k]); })).then(function (urls) {
+        keys.forEach(function (k, n) { document.documentElement.style.setProperty('--tx-' + names[k], urls[n]); });
+        Array.prototype.forEach.call(document.querySelectorAll('.pack'), build);
+      });
+    }
+    /* right after first paint (not "when idle", which could take seconds on a busy page) */
+    requestAnimationFrame(function () { setTimeout(start, 0); });
+
+    /* toggle labels must never move focus (and so the page) */
+    Array.prototype.forEach.call(document.querySelectorAll('.toggles label'), function (l) { l.addEventListener('mousedown', function (e) { e.preventDefault(); }); });
+  })();
+  </script>
+</body>
+</html>
